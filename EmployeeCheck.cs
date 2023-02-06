@@ -13,6 +13,7 @@ namespace EmployeeWageProblem
         public const int EMP_RATE_PER_HOUR = 20;
         public const int NUM_OF_WORKING_DAYS = 20;
         public const int MAX_HRS_IN_MONTH = 10;
+
         public static void CheckAttendence()
 
         {
@@ -50,10 +51,9 @@ namespace EmployeeWageProblem
             }
             int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
             Console.WriteLine("totalEmpwage:" + totalEmpWage);
-
-
         }
-
-
     }
+
+
+    
 }
