@@ -7,22 +7,25 @@ using System.Threading.Tasks;
 namespace EmployeeWageProblem
 {
     public class EmployeeCheck
+         public const int IS_PART_TIME = 1;
+    public const int IS_FULL_TIME = 2;
+    public const int EMP_RATE_PER_HOUR = 20;
+    public const int NUM_OF_WORKING_DAYS = 20;
     {
         public static void CheckAttendence()
+    {
+        int EMP_RATE_PER_HOUR = 20;
+        int empHrs = 0;
+        int empWage = 0;
+        int totalEmpWage = 0;
+
+        for (int day = 0; day < NUM_OF_WORKING_DAYS; day++)
+
         {
-
-
-           public const int IS_PART_TIME = 1;
-        public const int IS_FULL_TIME = 2;
-        public const int EMP_RATE_PER_HOUR = 20;
-        public static void CheckAttendence()
-        {
-
-            int empHrs = 0;
-            int empWage = 0;
-
             Random random = new Random();
-            int empCheck = random.Next(2);
+            int empCheck = random.Next(3);
+
+
 
             switch (empCheck)
             {
@@ -36,10 +39,18 @@ namespace EmployeeWageProblem
                     empHrs = 0;
                     break;
             }
+
             empWage = empHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("Employee Wage: " + empWage);
+            totalEmpWage += empCheck;
 
 
+
+            Console.WriteLine("EmpWage: " + empWage);
         }
+        Console.WriteLine("totalEmpwage:" + totalEmpWage);
+
     }
+
+    
+    
 }
